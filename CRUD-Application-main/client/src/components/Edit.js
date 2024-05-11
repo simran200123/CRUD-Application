@@ -6,10 +6,7 @@ const Edit = () => {
     const [inpval,setINP] = useState({
         name:"",
         status:"",
-       // age:"",
         performance:"",
-        // work:"",
-        // add:"",
         desc:""
     })
 
@@ -24,8 +21,7 @@ const Edit = () => {
         })
     }
 
-    // const [getuserdata, setuserdata] = useState([]);
-    // console.log(getuserdata);
+ 
 
     const {id} = useParams("");
     console.log(id);
@@ -63,10 +59,9 @@ const Edit = () => {
         const{
             name,
             status,
-           // age,
+     
             performance,
-            // work,
-            // add,
+         
             desc
         } = inpval
 
@@ -78,10 +73,7 @@ const Edit = () => {
             body:JSON.stringify({
                 name,
            status,
-           // age,
             performance,
-            // work,
-            // add,
             desc
             })
         });
@@ -111,22 +103,12 @@ const Edit = () => {
                             <label htmlFor="exampleInputPassword1" className="form-label">Status</label>
                             <input type="status" onChange={setdata} value={inpval.status} name="status"  className="form-control" id="exampleInputPassword1" />
                         </div>
-                        {/* <div className="mb-3 col-lg-6 col-md-6 col-12">
-                            <label htmlFor="exampleInputPassword1" className="form-label">Age</label>
-                            <input type="text" onChange={setdata} value={inpval.age} name="age"  className="form-control" id="exampleInputPassword1" />
-                        </div> */}
+                       
                         <div className="mb-3 col-lg-6 col-md-6 col-12">
                             <label htmlFor="exampleInputPassword1" className="form-label">Performance</label>
                             <input type="number" onChange={setdata} value={inpval.performance} name="performance"  className="form-control" id="exampleInputPassword1" />
                         </div>
-                        {/* <div className="mb-3 col-lg-6 col-md-6 col-12">
-                            <label htmlFor="exampleInputPassword1" className="form-label">Work</label>
-                            <input type="text" onChange={setdata} value={inpval.work} name="work"  className="form-control" id="exampleInputPassword1" />
-                        </div>
-                        <div className="mb-3 col-lg-6 col-md-6 col-12">
-                            <label htmlFor="exampleInputPassword1" className="form-label">Address</label>
-                            <input type="text" onChange={setdata} value={inpval.add} name="add"  className="form-control" id="exampleInputPassword1" />
-                        </div> */}
+                     
                         <div className="mb-3 col-lg-12 col-md-12 col-12">
                             <label htmlFor="exampleInputPassword1" className="form-label">Description</label>
                             <textarea onChange={setdata} value={inpval.desc} name="desc"  className='form-control' rows={10} cols={20}></textarea>
