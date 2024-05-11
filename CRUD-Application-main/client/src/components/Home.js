@@ -64,9 +64,9 @@ const Home = () => {
                     <table className="table">
                         <thead>
                             <tr className='table-dark'>
-                                <th scope="col">Id</th>
-                                <th scope="col">Username</th>
-                                <th scope="col">Status</th>
+                                <th scope="col">Robot Id</th>
+                                <th scope="col">Robot name</th>
+                                <th scope="col">Robot Status</th>
 
                                 <th scope="col">Performance</th>
                                 {/* <th scope="col">Job</th> */}
