@@ -51,21 +51,15 @@ const Details = () => {
 
             <Card sx={{ maxWidth: 600 }}>
                 <CardContent>
-                    {/* { <div className='add_btn'>
-                        <button className='btn btn-primary mx-2'><CreateIcon /></button>
-                        <button className='btn btn-danger'><DeleteOutlineIcon /></button>
-                    </div> } */}
                     <div className='row'>
                         <div className='left_view col-lg-6 col-md-6 col-12'>
                             <img src={require('./profile.png')} style={{ width: 50 }} />
                             <h3 className='mt-3'>Name: <span >{getuserdata.name}</span></h3>
-                            {/* <h3 className='mt-3'>Age: <span >{getuserdata.age}</span></h3> */}
                             <p className='mt-3'><MailOutlineIcon />Status: <span >{getuserdata.status}</span></p>
-                            {/* <p className='mt-3'><WorkIcon />Occupation: <span >{getuserdata.work}</span></p> */}
                         </div>
                         <div className='right_view col-lg-6 col-md-6 col-12'>
                             <p className='mt-5'><PhoneAndroidIcon />Performance: <span>{getuserdata.performance}</span></p>
-                            {/* <p className='mt-3'><LocationOnIcon />Location: <span>{getuserdata.add}</span></p> */}
+                        
                             <p className='mt-3'><DescriptionIcon />Description: <span>{getuserdata.desc}</span></p>
                         </div>
                     </div>
