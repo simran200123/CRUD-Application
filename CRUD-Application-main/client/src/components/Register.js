@@ -6,10 +6,7 @@ const Register = () => {
     const [inpval, setINP] = useState({
         name: "",
         status: "",
-        // age: "",
         performance: "",
-        // work: "",
-        // add: "",
         desc: ""
     })
 
@@ -28,10 +25,7 @@ const Register = () => {
         e.preventDefault();
         const { name,
             status,
-            // age,
             performance,
-            // work,
-            // add,
             desc } = inpval;
         const res = await fetch("http://localhost:8003/register", {
             method: "POST",
@@ -41,10 +35,7 @@ const Register = () => {
             body: JSON.stringify({
                 name,
                 status,
-                // age,
                 performance,
-                // work,
-                // add,
                 desc
             })
         })
@@ -74,7 +65,6 @@ const Register = () => {
                         </div>
                         <div className="mb-3 col-lg-6 col-md-6 col-12">
                             <label htmlFor="exampleInputPassword1" className="form-label">Status</label>
-                            {/* <input type="text" onChange={setdata} value={inpval.status} name="status" className="form-control" id="exampleInputPassword1" /> */}
                             <select className="form-label" name="status" value={inpval.status} onChange={setdata}>
                             <option value="">Select status</option>
                             <option value="idle">IDLE</option>
@@ -82,22 +72,12 @@ const Register = () => {
                             <option value="charging">CHARGING</option>
                         </select>
                         </div>
-                        {/* <div className="mb-3 col-lg-6 col-md-6 col-12"> 
-                            <label htmlFor="exampleInputPassword1" className="form-label">Age</label>
-                            <input type="text" onChange={setdata} value={inpval.age} name="age" className="form-control" id="exampleInputPassword1" />
-                        </div>*/}
+                      
                         <div className="mb-3 col-lg-6 col-md-6 col-12">
                             <label htmlFor="exampleInputPassword1" className="form-label">Performance</label>
                             <input type="number" onChange={setdata} value={inpval.performance} name="performance" className="form-control" id="exampleInputPassword1" />
                         </div>
-                        {/* <div className="mb-3 col-lg-6 col-md-6 col-12"> 
-                            <label htmlFor="exampleInputPassword1" className="form-label">Work</label>
-                            <input type="text" onChange={setdata} value={inpval.work} name="work" className="form-control" id="exampleInputPassword1" />
-                        </div>
-                        <div className="mb-3 col-lg-6 col-md-6 col-12">
-                            <label htmlFor="exampleInputPassword1" className="form-label">Address</label>
-                            <input type="text" onChange={setdata} value={inpval.add} name="add" className="form-control" id="exampleInputPassword1" />
-                        </div>*/}
+                      
                         <div className="mb-3 col-lg-12 col-md-12 col-12">
                             <label htmlFor="exampleInputPassword1" className="form-label">Description</label>
                             <textarea onChange={setdata} value={inpval.desc} name="desc" className='form-control' rows={10} cols={20}></textarea>
